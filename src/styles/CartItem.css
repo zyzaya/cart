@@ -1,0 +1,24 @@
+.CartItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.CartItem > div > input {
+  width: 37px;
+}
+
+.CartItem > div > button {
+  background-color: #F9F4F5;
+  border: 1px solid gray;
+  margin: 0 1px;
+}
+
+.CartItem > div > button:hover {
+  border: 1px solid black;
+}
+
+.CartItem > div > button:active {
+  border: 1px solid gray;
+  border-style: inset;
+}
