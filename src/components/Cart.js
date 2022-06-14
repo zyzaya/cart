@@ -1,8 +1,10 @@
+import CartItem from './CartItem';
+
 export default function Cart(props) {
   return (
     <div className="Cart">
       {props.items.map((i) => (
-        <div>{i.name}</div>
+        <CartItem key={i.key} name={i.name} count={0} />
       ))}
     </div>
   );
