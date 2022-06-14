@@ -1,0 +1,8 @@
+.Cart {
+  width: 40%;
+  margin: 15px auto;
+}
+
+.Cart > *:nth-child(odd) {
+  background-color: #F9F4F5;
+}

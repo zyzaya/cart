@@ -1,3 +1,4 @@
+import '../styles/Cart.css';
 import CartItem from './CartItem';
 
 export default function Cart(props) {
