@@ -1,0 +1,25 @@
+.Item {
+  padding: 5px;
+  width: min-content;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 1fr min-content;
+  column-gap: 25px;
+  row-gap: 3px;
+}
+
+.Item > img {
+  width: 100%;
+  grid-area: 1 / 1 / 2 / -1;
+}
+
+.Item > div {
+  text-align: center;
+  justify-self: right;
+}
+
+.Item > button {
+  width: 90px;
+  justify-self: end;
+}
