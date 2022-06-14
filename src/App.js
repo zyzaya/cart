@@ -1,3 +1,4 @@
+import './App.css';
 import { faker } from '@faker-js/faker';
 import Item from './components/Item';
 import Navbar from './components/Navbar';
