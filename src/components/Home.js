@@ -8,7 +8,7 @@ function Home() {
   let items = [...new Array(15)].map((e) => ({
     name: faker.name.firstName(),
     key: uniqid(),
-    image: faker.image.abstract(),
+    image: faker.image.abstract(640, 480, true),
   }));
 
   return (
