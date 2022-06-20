@@ -3,16 +3,13 @@ import { faker } from '@faker-js/faker';
 import uniqid from 'uniqid';
 import Item from './Item';
 
-function Home() {
+function Home(props) {
+  console.log(props);
   let items = [...new Array(15)].map((e) => ({
     name: faker.name.firstName(),
     key: uniqid(),
     image: faker.image.abstract(640, 480, true),
   }));
-
-  function addToCart(item) {
-    console.log(item);
-  }
 
   return (
     <div className="Home">
@@ -22,7 +19,7 @@ function Home() {
             key={i.key}
             name={i.name}
             image={i.image}
-            onAdd={() => addToCart(i)}
+            onAdd={() => props.onAddToCart(i)}
           />
         ))}
       </div>
