@@ -5,7 +5,7 @@ export default function Item(props) {
     <div className="Item">
       <img src={props.image} alt="" srcSet="" />
       <div className="">{props.name}</div>
-      <button>Add to Cart</button>
+      <button onClick={props.onAdd}>Add to Cart</button>
     </div>
   );
 }
