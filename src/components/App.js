@@ -4,14 +4,16 @@ import Home from './Home';
 import Navbar from './Navbar';
 import { faker } from '@faker-js/faker';
 import uniqid from 'uniqid';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function App() {
-  let items = [...new Array(15)].map((e) => ({
-    name: faker.name.firstName(),
-    key: uniqid(),
-    image: faker.image.abstract(640, 480, true),
-  }));
+  let items = useRef(
+    [...new Array(15)].map((e) => ({
+      name: faker.name.firstName(),
+      key: uniqid(),
+      image: faker.image.abstract(640, 480, true),
+    }))
+  );
 
   const [cart, setCart] = useState([]);
 
@@ -43,7 +45,7 @@ export default function App() {
         <Route path="cart" element={<Cart items={cart} />} />
         <Route
           path=""
-          element={<Home onAddToCart={handleAddToCart} items={items} />}
+          element={<Home onAddToCart={handleAddToCart} items={items.current} />}
         />
       </Routes>
       <Outlet onAddToCart={handleAddToCart} />
