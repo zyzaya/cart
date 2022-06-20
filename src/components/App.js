@@ -18,8 +18,6 @@ export default function App() {
   const [cart, setCart] = useState([]);
 
   function handleAddToCart(item) {
-    console.log(cart);
-    console.log(item);
     let newCart = cart.map((i) => {
       let ret = { ...i };
       if (i.key === item.key) ret.count += 1;
