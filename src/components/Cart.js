@@ -2,6 +2,7 @@ import '../styles/Cart.css';
 import CartItem from './CartItem';
 
 function Cart(props) {
+  console.log(props.items);
   return (
     <div>
       <div className="Cart">
