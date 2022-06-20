@@ -1,7 +1,7 @@
 import '../styles/Cart.css';
 import CartItem from './CartItem';
 
-export default function Cart(props) {
+function Cart(props) {
   return (
     <div className="Cart">
       {props.items.map((i) => (
@@ -10,3 +10,9 @@ export default function Cart(props) {
     </div>
   );
 }
+
+Cart.defaultProps = {
+  items: [],
+};
+
+export default Cart;
