@@ -6,6 +6,7 @@ export default function CartItem(props) {
 
   function handleChange(e) {
     setCount(e.target.value);
+    props.onCountChange(e.target.value);
   }
 
   return (

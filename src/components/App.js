@@ -15,24 +15,27 @@ export default function App() {
     }))
   );
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({});
 
-  function handleAddToCart(item) {
-    let newCart = cart.map((i) => {
-      let ret = { ...i };
-      if (i.key === item.key) ret.count += 1;
-      return i;
-    });
-
-    if (newCart.filter((e) => e.key === item.key).length === 0) {
-      newCart.push({
-        key: item.key,
-        name: item.name,
-        count: 1,
-      });
+  function addToCart(item) {
+    let newCart = { ...cart };
+    if (newCart[item.key] === undefined) {
+      newCart[item.key] = item;
+      newCart[item.key].count = 1;
+    } else {
+      newCart[item.key].count += 1;
     }
+    setCart(newCart);
+  }
 
-    console.log(newCart);
+  function setCount(item, count) {
+    let newCart = { ...cart };
+    if (count === 0) {
+      newCart[item.key] = undefined;
+    } else {
+      if (newCart[item.key] === undefined) newCart[item.key] = item;
+      newCart[item.key].count = count;
+    }
     setCart(newCart);
   }
 
@@ -40,13 +43,20 @@ export default function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="cart" element={<Cart items={cart} />} />
+        <Route
+          path="cart"
+          element={
+            <Cart items={Object.values(cart)} onCountChange={setCount} />
+          }
+        />
         <Route
           path=""
-          element={<Home onAddToCart={handleAddToCart} items={items.current} />}
+          element={
+            <Home onAddToCart={(i) => addToCart(i)} items={items.current} />
+          }
         />
       </Routes>
-      <Outlet onAddToCart={handleAddToCart} />
+      <Outlet />
     </div>
   );
 }

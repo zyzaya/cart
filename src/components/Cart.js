@@ -6,7 +6,12 @@ function Cart(props) {
     <div>
       <div className="Cart">
         {props.items.map((i) => (
-          <CartItem key={i.key} name={i.name} count={0} />
+          <CartItem
+            key={i.key}
+            name={i.name}
+            count={0}
+            onCountChange={(count) => props.onCountChange(i, count)}
+          />
         ))}
       </div>
     </div>
