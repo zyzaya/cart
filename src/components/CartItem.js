@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import '../styles/CartItem.css';
 
 export default function CartItem(props) {
-  let [count, setCount] = useState(0);
-
   function handleChange(e) {
-    setCount(e.target.value);
     props.onCountChange(e.target.value);
   }
 
@@ -17,7 +13,7 @@ export default function CartItem(props) {
           type="number"
           name=""
           id=""
-          value={count}
+          value={props.count}
           onChange={handleChange}
         />
         <button>x</button>

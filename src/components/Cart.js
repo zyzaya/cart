@@ -9,7 +9,7 @@ function Cart(props) {
           <CartItem
             key={i.key}
             name={i.name}
-            count={0}
+            count={i.count}
             onCountChange={(count) => props.onCountChange(i, count)}
           />
         ))}
