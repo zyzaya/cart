@@ -5,6 +5,10 @@ export default function CartItem(props) {
     props.onCountChange(e.target.value);
   }
 
+  function removeFromCart() {
+    props.onCountChange(0);
+  }
+
   return (
     <div className="CartItem">
       <span>{props.name}</span>
@@ -17,7 +21,7 @@ export default function CartItem(props) {
           min={0}
           onChange={handleChange}
         />
-        <button>x</button>
+        <button onClick={removeFromCart}>x</button>
       </div>
     </div>
   );
