@@ -40,7 +40,7 @@ export default function App() {
   }
 
   let itemCount = Object.values(cart).reduce((count, item) => {
-    return count + item.count;
+    return count + parseInt(item.count);
   }, 0);
 
   return (
