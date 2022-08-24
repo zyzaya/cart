@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+.Home {
+  max-width: 800px;
+  margin: auto;
+}
+
 .Home > .Items {
   margin: 15px;
   display: flex;
