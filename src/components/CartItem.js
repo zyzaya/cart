@@ -14,6 +14,7 @@ export default function CartItem(props) {
           name=""
           id=""
           value={props.count}
+          min={0}
           onChange={handleChange}
         />
         <button>x</button>
