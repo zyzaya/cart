@@ -30,8 +30,9 @@ export default function App() {
 
   function setCount(item, count) {
     let newCart = { ...cart };
+    count = parseInt(count);
     if (count === 0) {
-      newCart[item.key] = undefined;
+      delete newCart[item.key];
     } else {
       if (newCart[item.key] === undefined) newCart[item.key] = item;
       newCart[item.key].count = count;
