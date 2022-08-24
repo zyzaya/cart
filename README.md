@@ -1,27 +1,13 @@
 # battleship
-An assignment from [The Odin Project](https://www.theodinproject.com/) to create the game of Battleship using javascript.
+An assignment from [The Odin Project](https://www.theodinproject.com/) to create a simple shoping cart using React.
 
-Site can be viewed at https://zyzaya.github.io/battleship/.
+Site can be viewed at .
 
 Additional information can be found at https://www.theodinproject.com/lessons/javascript-shopping-cart
 
-// image
-
-
-# How to Play
-
-# Features
-
-- a user interface using HTML and CSS
-- ship placement
-- a simple AI opponent
-
-
-
 ## Technologies
+- React
 - Javascript
-- npm
-- react
 - HTML
 - CSS
 - Git
