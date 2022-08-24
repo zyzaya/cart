@@ -39,9 +39,13 @@ export default function App() {
     setCart(newCart);
   }
 
+  let itemCount = Object.values(cart).reduce((count, item) => {
+    return count + item.count;
+  }, 0);
+
   return (
     <div>
-      <Navbar />
+      <Navbar itemCount={itemCount} />
       <Routes>
         <Route
           path="cart"
