@@ -4,8 +4,8 @@ import '../styles/Navbar.css';
 export default function Navbar(props) {
   return (
     <div className="Navbar">
-      <Link to="/">Home</Link>
-      <Link to="/cart">Cart ({props.itemCount})</Link>
+      <Link to="/cart">Home</Link>
+      <Link to="/cart/cart">Cart ({props.itemCount})</Link>
     </div>
   );
 }

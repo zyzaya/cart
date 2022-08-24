@@ -49,13 +49,13 @@ export default function App() {
       <Navbar itemCount={itemCount} />
       <Routes>
         <Route
-          path="cart"
+          path="/cart"
           element={
             <Cart items={Object.values(cart)} onCountChange={setCount} />
           }
         />
         <Route
-          path=""
+          path="/"
           element={
             <Home onAddToCart={(i) => addToCart(i)} items={items.current} />
           }
