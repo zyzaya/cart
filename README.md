@@ -1,4 +1,4 @@
-# battleship
+# cart
 An assignment from [The Odin Project](https://www.theodinproject.com/) to create a simple shoping cart using React.
 
 Site can be viewed at https://zyzaya.github.io/cart.
